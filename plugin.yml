@@ -1,0 +1,64 @@
+{
+  "name": "WorldTP",
+  "main": "Thunder33345\\WorldTP\\WorldTP",
+  "author": "Thunder33345",
+  "description": "Teleport between worlds with ease",
+  "website": "https://github.com/ThunderDoesPlugins/WorldTP",
+  "version": "1.0.0",
+  "api": [
+    "3.0.0-ALPHA10"
+  ],
+  "commands": {
+    "worldtp": {
+      "description": "Teleport you into a world",
+      "usage": "/worldtp <world>",
+      "aliases": [wtp],
+      "permission": "worldtp.tp",
+      "permission-message": "Insufficient Permissions!"
+    },
+    "worldlist": {
+      "description": "List your worlds",
+      "usage": "/worldlist",
+      "aliases": [wls],
+      "permission": "worldtp.list",
+      "permission-message": "Insufficient Permissions!"
+    },
+    "worldload": {
+      "description": "Loads a world",
+      "usage": "/worldload <folder>",
+      "aliases": [wld],
+      "permission": "worldtp.load",
+      "permission-message": "Insufficient Permissions!"
+    },
+    "worldunload": {
+      "description": "Unloads a world",
+      "usage": "/worldunload <folder>",
+      "aliases": [wul],
+      "permission": "worldtp.unload",
+      "permission-message": "Insufficient Permissions!"
+    }
+  },
+  "permissions": {
+    "worldtp": {
+      "default": "false",
+      "children": {
+        "worldtp.tp": {
+          "default": "op",
+          "description": "Allows player to teleport between worlds"
+        },
+        "worldtp.list": {
+          "default": "op",
+          "description": "Allows player to list worlds"
+        },
+        "worldtp.load": {
+          "default": "op",
+          "description": "Allows player to load worlds"
+        },
+        "worldtp.unload": {
+          "default": "op",
+          "description": "Allows player to unload worlds"
+        }
+      }
+    }
+  }
+}
