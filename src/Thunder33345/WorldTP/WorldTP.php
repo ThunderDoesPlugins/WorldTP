@@ -43,7 +43,7 @@ class WorldTP extends PluginBase
     }
     $world = implode(' ', $args);
     if(trim($world) === ''){
-      $$player->sendMessage(self::PREFIX_ERROR.' /worldtp <folder name>');
+      $player->sendMessage(self::PREFIX_ERROR.' /worldtp <folder name>');
       return;
     }
 
