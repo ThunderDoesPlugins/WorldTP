@@ -6,7 +6,7 @@
   "website": "https://github.com/ThunderDoesPlugins/WorldTP",
   "version": "1.0.0",
   "api": [
-    "3.0.0-ALPHA10"
+    "3.0.0-ALPHA11"
   ],
   "commands": {
     "worldtp": {
