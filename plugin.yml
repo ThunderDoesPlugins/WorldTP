@@ -4,9 +4,9 @@
   "author": "Thunder33345",
   "description": "Teleport between worlds with ease",
   "website": "https://github.com/ThunderDoesPlugins/WorldTP",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "api": [
-    "3.0.0-ALPHA10"
+    "3.0.0"
   ],
   "commands": {
     "worldtp": {
