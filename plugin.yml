@@ -16,6 +16,13 @@
       "permission": "worldtp.tp",
       "permission-message": "Insufficient Permissions!"
     },
+    "worldtpplayer": {
+      "description": "Teleport others into a world",
+      "usage": "/worldtpplayer <player> <world>",
+      "aliases": [wtpp],
+      "permission": "worldtp.tpp",
+      "permission-message": "Insufficient Permissions!"
+    },
     "worldlist": {
       "description": "List your worlds",
       "usage": "/worldlist",
