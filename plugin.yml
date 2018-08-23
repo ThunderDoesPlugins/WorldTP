@@ -53,6 +53,10 @@
           "default": "op",
           "description": "Allows player to teleport between worlds"
         },
+        "worldtp.tpp": {
+          "default": "op",
+          "description": "Allows player to teleport others between worlds"
+        },
         "worldtp.list": {
           "default": "op",
           "description": "Allows player to list worlds"
