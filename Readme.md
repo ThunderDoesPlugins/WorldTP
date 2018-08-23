@@ -14,6 +14,19 @@ Teleport you to the selected world, attempts to load it, if it's not found
 Alias: `wtp`
 
 Permission: `worldtp.tp`
+
+Usage: `/worldtp <worldname>`
+
+### WorldTPPlayer
+
+Teleport selected player to the selected world, attempts to load it, if it's not found
+
+Alias: `wtpp`
+
+Permission: `worldtp.tpp`
+
+Usage: `/worldtpplayer <player> <worldname>`
+
 ### WorldList
 List all your worlds
 
@@ -22,26 +35,33 @@ Alias: `wls`
 Permission: `worldtp.list`
 
 ##### Legends
+
+\+(indicator in color) folder name =\> world name
+
 Green + = world loaded
 
 Red + = world not loaded
 
 Gold X = world you are in
 
-X =\> Y = folder name =\> world name
 ### WorldLoad
 Loads a specified world
 
 Alias: `wld`
 
 Permission: `worldtp.load`
+
+Usage: `/worldload <world>`
+
 ### WorldUnload
 Unloads a specified world
 
 Alias: `wul`
 
-Permission: `worldtp.unload
+Permission: `worldtp.unload`
 
+Usage: `/worldunload <world>
+`
 #### Note:
 All commands do not have capitalization,
 
