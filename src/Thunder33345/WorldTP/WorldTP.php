@@ -84,17 +84,17 @@ class WorldTP extends PluginBase
     }
   }
 
-    public function commandPlayerTP(CommandSender $player, Command $command, string $label, array $args)
+    public function commandPlayerTP(CommandSender $sender, Command $command, string $label, array $args)
     {
         if(count($args) < 2){
-            $player->sendMessage(self::PREFIX_ERROR.' /worldplayertp <player> <folder name>');
+            $sender->sendMessage(self::PREFIX_ERROR.' /worldplayertp <player> <folder name>');
             return;
         }
 
         $targetName = array_shift($args);
         $target = $this->getServer()->getPlayer($targetName);
         if (!$target instanceof Player){
-            $player->sendMessage(self::PREFIX_ERROR." Fail to find selected player($targetName)");
+            $sender->sendMessage(self::PREFIX_ERROR." Fail to find selected player($targetName)");
             return;
         }
         $world = implode(' ', $args);
@@ -102,20 +102,20 @@ class WorldTP extends PluginBase
         $server = $this->getServer();
         $level = $server->getLevelByName($world);
         if(!$level instanceof Level){
-            $player->sendMessage(self::PREFIX.' Attempting to load world '.$world.'...');
+            $sender->sendMessage(self::PREFIX.' Attempting to load world '.$world.'...');
             $res = $server->loadLevel($world);
             if($res) $level = $server->getLevelByName($world);
 
             if(!$level instanceof Level){
-                $player->sendMessage(self::PREFIX_ERROR.' Failed to load level');
+                $sender->sendMessage(self::PREFIX_ERROR.' Failed to load level');
                 return;
-            }else $player->sendMessage(self::PREFIX.' Loaded world '.$world.'!');
+            }else $sender->sendMessage(self::PREFIX.' Loaded world '.$world.'!');
         }
-        $res = $player->teleport($level->getSafeSpawn());
+        $res = $target->teleport($level->getSafeSpawn());
         if($res){
-            $player->sendMessage(self::PREFIX.' Successfully teleported '.$target->getName().' to '.$world);
+            $sender->sendMessage(self::PREFIX.' Successfully teleported '.$target->getName().' to '.$world);
         }else{
-            $player->sendMessage(self::PREFIX_ERROR.' Failed to teleported '.$target->getName().' to '.$world.'!');
+            $sender->sendMessage(self::PREFIX_ERROR.' Failed to teleported '.$target->getName().' to '.$world.'!');
         }
     }
 
